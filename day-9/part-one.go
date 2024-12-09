@@ -60,6 +60,18 @@ func swap(arr []int) ([]int, bool) {
 	return arr, true
 }
 
+func calculateChecksum(arr []int) int {
+	total := 0
+	for i, elt := range arr {
+		if elt == -1 {
+			return total
+		}
+		total += i * elt
+	}
+
+	return total
+}
+
 func PartOne() {
 	lines := opener.MustReadFile("./day-9/input.txt")
 	line := lines[0]
@@ -83,5 +95,7 @@ func PartOne() {
 		unpacked, cont = swap(unpacked)
 	}
 
-	fmt.Println(unpacked)
+	checksum := calculateChecksum(unpacked)
+
+	fmt.Println(checksum)
 }
