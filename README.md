@@ -6,7 +6,7 @@ In `main.go`, delete the import and `day-x.PartOne()` call.
 Import the day of your choosing and call `day-x.PartOne()` or `day-x.PartTwo()`.
 
 ## Other Files
-### `openers`
+### `opener`
 Contains reusable functions to open input files.
 
 ### `handlers`
