@@ -1,0 +1,5 @@
+package daynine
+
+func PartOne() {
+	
+}
