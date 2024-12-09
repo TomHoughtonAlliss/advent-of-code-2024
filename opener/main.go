@@ -11,7 +11,7 @@ func MustReadFile(path string) []string {
 		panic(err)
 	}
 	defer file.Close()
-	
+
 	var lines []string
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
@@ -23,8 +23,4 @@ func MustReadFile(path string) []string {
 	}
 
 	return lines
-}
-
-func MustReadFileToString(path string) string {
-	return ""
 }
