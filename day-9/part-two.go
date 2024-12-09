@@ -65,19 +65,6 @@ func (d *disc) toArray() []int {
 	return arr
 }
 
-func (d *disc) findLastBlock() int {
-	for j := range d.blocks {
-		i := len(d.blocks) - j - 1
-
-		b := d.blocks[i]
-		if b.id != -1 {
-			return i
-		}
-	}
-
-	return -1
-}
-
 func (d *disc) findFirstGap(length int) int {
 	for i, b := range d.blocks {
 		if b.length >= length && b.id == -1 {
