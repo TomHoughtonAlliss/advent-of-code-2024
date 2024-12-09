@@ -20,19 +20,6 @@ func (b *block) toArray() []int {
 	return arr
 }
 
-func (d *disc) print() {
-	arr := d.toArray()
-	for _, elt := range arr {
-		if elt == -1 {
-			fmt.Print("_ ")
-		} else {
-			fmt.Print(elt, " ")
-		}
-	}
-
-	fmt.Println()
-}
-
 type disc struct {
 	blocks []block
 }
@@ -86,12 +73,10 @@ func (d *disc) insert(b block, i int) {
 }
 
 func (d *disc) swap(blockIndex int) bool {
-	d.print()
 	b := d.blocks[blockIndex]
 
 	gapIndex := d.findFirstGap(b.length)
 	if gapIndex == -1 || gapIndex > blockIndex || b.id == -1 {
-		fmt.Println()
 		return false
 	}
 
@@ -115,8 +100,6 @@ func (d *disc) swap(blockIndex int) bool {
 		d.insert(newBlock, gapIndex+1)
 	}
 
-	d.print()
-	fmt.Println()
 	return true
 }
 
