@@ -2,8 +2,8 @@
 A repository to store solutions to 2024's Advent of Code.
 
 ## To Run
-In `main.go`, delete the import and `day-x.PartOne()` call.
-Import the day of your choosing and call `day-x.PartOne()` or `day-x.PartTwo()`.
+Add an `input.txt` file to the root of your chosen package. Paste in your input from Advent of Code.
+In `main.go`, import your chosen package - let's call it `day-x` - and call `day-x.PartOne()` in `main()`. Change this to `PartTwo()` if needed.
 
 ## Other Files
 ### `opener`
