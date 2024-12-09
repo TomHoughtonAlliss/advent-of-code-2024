@@ -1,9 +1,9 @@
 package main
 
 import (
-	"www.advent.com/day-8"
+	daynine "www.advent.com/day-9"
 )
 
 func main() {
-	dayeight.PartTwo()
+	daynine.PartOne()
 }
