@@ -63,10 +63,9 @@ func swap(arr []int) ([]int, bool) {
 func calculateChecksum(arr []int) int {
 	total := 0
 	for i, elt := range arr {
-		if elt == -1 {
-			return total
+		if elt != -1 {
+			total += i * elt
 		}
-		total += i * elt
 	}
 
 	return total
