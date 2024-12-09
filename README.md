@@ -9,5 +9,5 @@ In `main.go`, import your chosen package - let's call it `day-x` - and call `day
 ### `opener`
 Contains reusable functions to open input files.
 
-### `handlers`
+### `helpers`
 Contains generalised and reusable helper functions.
